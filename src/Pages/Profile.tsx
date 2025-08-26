@@ -31,12 +31,10 @@ const Profile: FC = () => {
         profile({ nik: userData?.nik });
     }, [profile, userData?.nik]);
 
-    let urlImage = "";
-    if(profileData?.gender === 'Pria'){
-        urlImage = "https://cdn3d.iconscout.com/3d/premium/thumb/office-boy-3d-icon-download-in-png-blend-fbx-gltf-file-formats--employee-male-man-businessman-avatar-pack-avatars-icons-6431786.png";
-    } else if(profileData?.gender === 'Wanita') {
-        urlImage = "https://static.vecteezy.com/system/resources/thumbnails/024/558/685/small_2x/3d-avatar-office-girl-illustration-png.png";
-    }
+    console.log(profileData?.status)
+    const status = (profileData?.status === 1) ? 'Sudah Menikah' : 'Belum Menikah';
+    
+    const urlImage = "https://cdn3d.iconscout.com/3d/premium/thumb/office-boy-3d-icon-download-in-png-blend-fbx-gltf-file-formats--employee-male-man-businessman-avatar-pack-avatars-icons-6431786.png";
 
     return (
         <div className="min-h-screen bg-white dark:bg-dark-main">
@@ -199,7 +197,7 @@ const Profile: FC = () => {
                             {isLoading ? (
                                 <div className="w-[180px] h-5 bg-gray-300 animate-pulse rounded-xl dark:bg-gray-600"></div>
                             ) : (
-                                <p className="text-sm text-gray-500 dark:text-gray-400">{profileData?.status}</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">{status}</p>
                             )}
                         </div>
                     </div>

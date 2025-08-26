@@ -9,7 +9,7 @@ export interface ProfileProps {
     st_kerja: string;
     jabatan: string;
     pendidikan: string;
-    status: string;
+    status: number;
     divisi: string;
     no_rek: string;
     email: string;
