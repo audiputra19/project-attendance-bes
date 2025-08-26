@@ -3,8 +3,8 @@ import { ProfileReq, ProfileRes } from "../interfaces/profile";
 
 export const apiProfile = createApi({
     reducerPath: 'apiProfile',
-    // baseQuery: fetchBaseQuery({ baseUrl: 'https://api-absensi-liart.vercel.app' }),
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://project-attendance-bes.vercel.app' }),
+    // baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
     endpoints: build => ({
         postProfile: build.mutation<ProfileRes, ProfileReq>({
             query: body => ({

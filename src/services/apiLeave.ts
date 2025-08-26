@@ -3,8 +3,8 @@ import { leaveReq, leaveRes, reportLeaveRes } from "../interfaces/leave";
 
 export const apiLeave = createApi({
     reducerPath: 'apiLeave',
-    // baseQuery: fetchBaseQuery({ baseUrl: 'https://api-absensi-liart.vercel.app' }),
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://project-attendance-bes.vercel.app' }),
+    // baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
     endpoints: build => ({
         postLeave: build.mutation<leaveRes, leaveReq>({
             query: body => ({
